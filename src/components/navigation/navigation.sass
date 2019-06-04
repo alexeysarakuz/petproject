@@ -1,0 +1,104 @@
+.helper
+  height: 82.25px
+.nav
+  background-color: #fff
+  padding: 20px 0
+  position: absolute
+  width: 100%
+  z-index: 150
+  transition: padding .3s
+  &.active
+    animation: stickBar .4s 1 forwards
+    padding: 10px 0
+    box-shadow: 0 3px 30px rgba(0, 0, 0, .15)
+    .nav__call
+      line-height: 30px
+      a
+        font-size: 12px
+      span.icon-phone
+        font-size: 18px
+  &__call
+    float: left
+    line-height: 40px
+    width: 33.33%
+    a
+      text-decoration: none
+      color: #595959
+      font-size: 13px
+      font-weight: bold
+      span
+        transition: .5s
+      &:hover
+        color: #02ae70
+    span
+      display: inline-block
+      vertical-align: middle
+    span.icon-phone
+      color: #02ae70
+      font-size: 20px
+      margin-right: 10px
+
+.nav
+  &.active
+    .nav__logo
+      font-size: 30px
+  &__logo
+    float: left
+    width: 33.33%
+    font-family: 'Mervale Script', cursive
+    font-size: 40px
+    text-align: center
+    a
+      color: #595959
+      cursor: pointer
+      text-decoration: none
+
+.nav
+  &.active
+    .nav__additional
+      line-height: 30px
+      &-search
+        font-size: 15px
+      &-cart
+        font-size: 13px
+  &__additional
+    float: right
+    width: 33.33%
+    color: lighten(#595959, 30%)
+    line-height: 40px
+    &-search
+      float: right
+      font-size: 18px
+      span
+        cursor: pointer
+        transition: .5s
+        &:hover
+          color: #02ae70
+    &-cart
+      float: right
+      font-size: 16px
+      margin-left: 15px
+      padding-left: 15px
+      border-left: 1px solid lighten(#595959, 50%)
+      span.icon-basket
+        cursor: pointer
+        transition: .5s
+        &:hover
+          color: #02ae70
+      .basket-num
+        background-color: #02ae70
+        color: #fff
+        padding-left: 5px
+        padding-right: 5px
+        margin-left: 10px
+        border-radius: 400px
+        cursor: pointer
+
+
+@keyframes stickBar
+  0%
+    position: fixed
+    top: -100px
+  100%
+    position: fixed
+    top: 0

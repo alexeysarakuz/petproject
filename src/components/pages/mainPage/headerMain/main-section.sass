@@ -1,0 +1,139 @@
+.header
+  &-section
+    background-image: url('/images/main/header/bg.png')
+    background-size: cover
+  &__row
+    background-color: #fff
+    transform: translateY(120px)
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+  &__col
+    width: 50%
+    padding: 40px
+    &1
+      padding-right: 0
+  &-section
+    a.header__categorie
+      display: block
+      text-decoration: none
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: #000
+        transform: scale(.4)
+        opacity: 0
+        transition: .4s
+        z-index: 6
+      &:hover
+        &::after
+          opacity: .3
+          transform: scale(1)
+  &__categorie
+    background-size: cover
+    background-repeat: no-repeat
+    color: #fff
+    h3, h2, p, b, a, div
+      position: relative
+      z-index: 10
+    h2
+      font-size: 54px
+      font-weight: bold
+      margin-right: 90px
+      margin-left: 90px
+      text-align: center
+      letter-spacing: 2px
+    p
+      text-align: center
+      margin-top: 10px
+      margin-right: 60px
+      margin-left: 60px
+      line-height: 1.6
+      font-size: 18px
+      margin-top: 30px
+      margin-bottom: 30px
+    b.header__categorie-link
+      color: #fff
+      text-align: center
+      text-decoration: none
+      position: relative
+      font-weight: bold
+      display: inline-block
+      &::after
+        content: ''
+        position: absolute
+        bottom: -5px
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: #fff
+    &-livingroom
+      background-image: url('/images/main/categories/livingroom.png')
+      padding: 193px 0px 0 0px
+      margin: 40px
+      margin-right: 0
+      div
+        text-align: center
+    &-bedroom
+      background-image: url('/images/main/categories/bedroom.png')
+      padding: 102px 20px 80px 30px
+      h3
+        font-size: 16px
+        font-weight: bold
+      h2
+        text-align: left
+        margin-left: 0
+        margin-top: 10px
+        font-size: 40px
+        letter-spacing: 0
+        margin-right: 300px
+        font-weight: normal
+        b
+          font-weight: bold
+
+    &-kitchen
+      margin-top: 40px
+      background-image: url('/images/main/categories/kitchen.png')
+      padding: 120px 0px 120px 0px
+      float: left
+      width: 48%
+      margin-right: 2%
+      h3
+        text-align: center
+        margin-bottom: 10px
+        letter-spacing: 0
+      h2
+        letter-spacing: 1.1px
+        font-size: 30px
+        margin-left: 0
+        margin-right: 0
+        text-transform: uppercase
+        font-weight: normal
+        b
+          font-weight: bold
+
+    &-creativity
+      margin-top: 40px
+      background-image: url('/images/main/categories/creativity.png')
+      padding: 120px 0px 120px 0px
+      float: left
+      width: 48%
+      margin-left: 2%
+      h3
+        text-align: center
+        margin-bottom: 10px
+        letter-spacing: 0
+      h2
+        letter-spacing: 1.1px
+        font-size: 30px
+        margin-left: 0
+        margin-right: 0
+        text-transform: uppercase
+        font-weight: normal
+        b
+          font-weight: bold
