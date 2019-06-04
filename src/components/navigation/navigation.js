@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react"
 
-import {Link, NavLink} from 'react-router-dom'
+import {Link, NavLink} from "react-router-dom"
 
-import CartItem from './cart/cartItem/cartItem'
+import CartItem from "./cart/cartItem/cartItem"
 
-import './navigation.sass'
-import './menu.sass'
+import "./navigation.sass"
+import "./menu.sass"
 
 class Navigation extends React.Component{
   constructor(){
@@ -25,8 +25,8 @@ class Navigation extends React.Component{
   }
 
   render(){
-    const navStickyClass = this.state.scrollOffset < 95 ? 'nav' : 'nav active';
-    const helperClass = this.state.scrollOffset < 95 ? 'helper' : 'helper active';
+    const navStickyClass = this.state.scrollOffset < 95 ? "nav" : "nav active";
+    const helperClass = this.state.scrollOffset < 95 ? "helper" : "helper active";
     return (
       <>
         <nav className={navStickyClass}>

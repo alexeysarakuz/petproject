@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react"
+import "./trendingItem.sass"
 
-import './trendingItem.sass'
-import AddToCartButton from '../addToCartButton/addToCartButton'
+import AddToCartButton from "../addToCartButton/addToCartButton"
 
 const TrendingItem = (props) => {
   const {data} = props;
-  const {title, price, image, rate} = data;
-  const imgPath = "/images/main/trending/" + image;
+  const {title, price, image} = data;
+  const imgPath = "/images/main/products/" + image;
 
   return (
     <div className="trending__item">

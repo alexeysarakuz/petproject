@@ -1,66 +1,66 @@
 @font-face {
-	font-family: 'Century Gothic';
-	src: url('/fonts/CenturyGothic/CenturyGothic-Italic.eot');
-	src: local('Century Gothic Italic'), local('CenturyGothic-Italic'),
-		url('/fonts/CenturyGothic/CenturyGothic-Italic.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/CenturyGothic/CenturyGothic-Italic.woff') format('woff'),
-		url('/fonts/CenturyGothic/CenturyGothic-Italic.ttf') format('truetype');
+	font-family: "Century Gothic";
+	src: url("/fonts/CenturyGothic/CenturyGothic-Italic.eot");
+	src: local("Century Gothic Italic"), local("CenturyGothic-Italic"),
+		url("/fonts/CenturyGothic/CenturyGothic-Italic.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/CenturyGothic/CenturyGothic-Italic.woff") format("woff"),
+		url("/fonts/CenturyGothic/CenturyGothic-Italic.ttf") format("truetype");
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
-	font-family: 'Century Gothic';
-	src: url('/fonts/CenturyGothic/CenturyGothic.eot');
-	src: local('Century Gothic'), local('CenturyGothic'),
-		url('/fonts/CenturyGothic/CenturyGothic.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/CenturyGothic/CenturyGothic.woff') format('woff'),
-		url('/fonts/CenturyGothic/CenturyGothic.ttf') format('truetype');
+	font-family: "Century Gothic";
+	src: url("/fonts/CenturyGothic/CenturyGothic.eot");
+	src: local("Century Gothic"), local("CenturyGothic"),
+		url("/fonts/CenturyGothic/CenturyGothic.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/CenturyGothic/CenturyGothic.woff") format("woff"),
+		url("/fonts/CenturyGothic/CenturyGothic.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Century Gothic';
-	src: url('/fonts/CenturyGothic/CenturyGothic-Bold.eot');
-	src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
-		url('/fonts/CenturyGothic/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/CenturyGothic/CenturyGothic-Bold.woff') format('woff'),
-		url('/fonts/CenturyGothic/CenturyGothic-Bold.ttf') format('truetype');
+	font-family: "Century Gothic";
+	src: url("/fonts/CenturyGothic/CenturyGothic-Bold.eot");
+	src: local("Century Gothic Bold"), local("CenturyGothic-Bold"),
+		url("/fonts/CenturyGothic/CenturyGothic-Bold.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/CenturyGothic/CenturyGothic-Bold.woff") format("woff"),
+		url("/fonts/CenturyGothic/CenturyGothic-Bold.ttf") format("truetype");
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Century Gothic';
-	src: url('/fonts/CenturyGothic/CenturyGothic-BoldItalic.eot');
-	src: local('Century Gothic Bold Italic'), local('CenturyGothic-BoldItalic'),
-		url('/fonts/CenturyGothic/CenturyGothic-BoldItalic.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/CenturyGothic/CenturyGothic-BoldItalic.woff') format('woff'),
-		url('/fonts/CenturyGothic/CenturyGothic-BoldItalic.ttf') format('truetype');
+	font-family: "Century Gothic";
+	src: url("/fonts/CenturyGothic/CenturyGothic-BoldItalic.eot");
+	src: local("Century Gothic Bold Italic"), local("CenturyGothic-BoldItalic"),
+		url("/fonts/CenturyGothic/CenturyGothic-BoldItalic.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/CenturyGothic/CenturyGothic-BoldItalic.woff") format("woff"),
+		url("/fonts/CenturyGothic/CenturyGothic-BoldItalic.ttf") format("truetype");
 	font-weight: bold;
 	font-style: italic;
 }
 
 @font-face {
-	font-family: 'Mervale Script';
-	src: url('/fonts/Mervale-Script/MervaleScript-Regular.ttf');
+	font-family: "Mervale Script";
+	src: url("/fonts/Mervale-Script/MervaleScript-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('/fonts/icomoon/icomoon.eot?usd5c1');
-  src:  url('/fonts/icomoon/icomoon.eot?usd5c1#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon/icomoon.ttf?usd5c1') format('truetype'),
-    url('/fonts/icomoon/icomoon.woff?usd5c1') format('woff'),
-    url('/fonts/icomoon/icomoon.svg?usd5c1#icomoon') format('svg');
+  font-family: "icomoon";
+  src:  url("/fonts/icomoon/icomoon.eot?usd5c1");
+  src:  url("/fonts/icomoon/icomoon.eot?usd5c1#iefix") format("embedded-opentype"),
+    url("/fonts/icomoon/icomoon.ttf?usd5c1") format("truetype"),
+    url("/fonts/icomoon/icomoon.woff?usd5c1") format("woff"),
+    url("/fonts/icomoon/icomoon.svg?usd5c1#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

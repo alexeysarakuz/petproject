@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react"
 
-import { connect } from 'react-redux'
-import * as actions from '../../../../../redux/actions/trending/trendingActions.js'
+import { connect } from "react-redux"
+import * as actions from "../../../../../redux/actions/trending/trendingActions.js"
 
 class AddToCartButton extends React.Component{
   state = {
@@ -14,9 +14,9 @@ class AddToCartButton extends React.Component{
   }
 
   render(){
-    const {data, addToCart} = this.props;
-    const iconClass = this.state.inCart ? 'icon-checkmark' : 'icon-shopping-cart';
-    const buttonText = this.state.inCart ? 'Add one more' : 'Add To Cart';
+    const {data} = this.props;
+    const iconClass = this.state.inCart ? "icon-checkmark" : "icon-shopping-cart";
+    const buttonText = this.state.inCart ? "Add one more" : "Add To Cart";
     return (
       <button onClick={() => this.addingToCart(data)}>
         <span className={iconClass}></span>{buttonText}

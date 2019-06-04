@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
 
-import './postersMain.sass'
+import "./postersMain.sass"
 
 const PostersMain = () => {
   return (
@@ -31,6 +31,7 @@ const PostersMain = () => {
           <p>New collection of Living room Furniture made of natural materials comes in various colors.</p>
         </Link>
       </div>
+      <div className="clearfix"></div>
     </section>
   )
 }

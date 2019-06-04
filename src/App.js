@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from "react-router-dom"
 
-import './base/main.sass'
+import "./base/main.sass"
 
-import Navigation from './components/navigation/navigation'
-import Footer from './components/footer/footer'
+import Navigation from "./components/navigation/navigation"
+import Footer from "./components/footer/footer"
 
-import MainPage from './components/pages/mainPage/mainPage'
+import MainPage from "./components/pages/mainPage/mainPage"
 
 function App() {
   return (

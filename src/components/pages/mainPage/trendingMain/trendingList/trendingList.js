@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 
-import {connect} from 'react-redux'
+import {connect} from "react-redux"
 
-import TrendingItem from '../trendingItem/trendingItem'
+import TrendingItem from "../trendingItem/trendingItem"
 
-import * as actions from '../../../../../redux/actions/trending/trendingActions.js'
+import * as actions from "../../../../../redux/actions/trending/trendingActions.js"
 
 class TrendingList extends React.PureComponent{
   componentDidMount(){

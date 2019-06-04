@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import './trendingMain.sass'
+import "./trendingMain.sass"
 
-import TrendingList from './trendingList/trendingList.js'
+import TrendingList from "./trendingList/trendingList.js"
 
 const TrendingMain = () => {
   return (

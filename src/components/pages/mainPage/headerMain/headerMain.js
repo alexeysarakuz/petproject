@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import {Link} from 'react-router-dom'
+import {Link} from "react-router-dom"
 
-import './main-section.sass'
+import "./main-section.sass"
 
 const HeaderMain = () => {
   return (
