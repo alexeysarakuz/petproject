@@ -3,6 +3,8 @@ import React from "react"
 import { connect } from "react-redux"
 import * as actions from "../../../../../redux/actions/trending/trendingActions.js"
 
+import './addToCartButton.sass'
+
 class AddToCartButton extends React.Component{
   state = {
     inCart: false,

@@ -1,0 +1,22 @@
+.trending
+  &__item
+    position: relative
+    button
+      text-transform: capitalize
+      border: none
+      opacity: 0
+      background-color: #02ae70
+      color: #fff
+      padding: 12px 30px
+      font-size: 13px
+      transform: translateY(-60px)
+      transition: opacity .1s, transform .1s, background-color .3s
+      cursor: pointer
+      position: absolute
+      left: 0
+      &:focus
+        outline: none
+      &:hover
+        background-color: darken(#fff, 80%)
+      span
+        padding-right: 8px

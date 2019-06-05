@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Rating from "react-rating"
 
 import "./productsItem.sass"
+import {Link} from 'react-router-dom'
 
 const ProductsItem = ({title, price, rate, image}) => {
   const imageSrc = "/images/main/products/" + image;
@@ -11,9 +13,16 @@ const ProductsItem = ({title, price, rate, image}) => {
         <img src={imageSrc} alt={title} />
       </div>
       <div className="products__content">
-        <h2>{title}</h2>
+        <Link to="">
+          <h2>{title}</h2>
+        </Link>
         <h3>${price}.00</h3>
-        <div>{rate}</div>
+        <Rating
+          initialRating={rate}
+          fullSymbol={<div className="rate rate-full">★</div>}
+          emptySymbol={<div className="rate rate-empty">★</div>}
+          onHover={() => false}
+        />
       </div>
       <div className="clearfix"></div>
     </div>
