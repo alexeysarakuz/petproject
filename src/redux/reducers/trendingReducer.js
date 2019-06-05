@@ -1,3 +1,18 @@
+const TrendingReducer = (state = defaultTrending, action) => {
+  switch (action.type) {
+    case "GET_TRENDING":
+      return {...state, ...{trendingData: trendingData}}
+    default:
+      return state;
+  }
+}
+
+const defaultTrending = {
+  trendingData: []
+}
+
+export default TrendingReducer
+
 const trendingData = [
   {
     id: 0,
@@ -57,18 +72,3 @@ const trendingData = [
   }
 
 ];
-
-const TrendingReducer = (state = defaultTrending, action) => {
-  switch (action.type) {
-    case "GET_TRENDING":
-      return {...state, ...{trendingData: trendingData}}
-    default:
-      return state;
-  }
-}
-
-const defaultTrending = {
-  trendingData: []
-}
-
-export default TrendingReducer

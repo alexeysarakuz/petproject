@@ -15,7 +15,6 @@ const MainPage = () => {
       <PostersMain />
       <ProductsMain />
       <BlogMain />
-      <PartnersMain />
     </>
   )
 }
