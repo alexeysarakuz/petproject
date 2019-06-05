@@ -1,8 +1,11 @@
 import React from "react"
 
-import {Link, NavLink} from "react-router-dom"
+import {Link} from "react-router-dom"
+
+import {connect} from "react-redux"
 
 import CartItem from "./cart/cartItem/cartItem"
+import Menu from './menu.js'
 
 import "./navigation.sass"
 import "./menu.sass"
@@ -27,6 +30,7 @@ class Navigation extends React.Component{
   render(){
     const navStickyClass = this.state.scrollOffset < 95 ? "nav" : "nav active";
     const helperClass = this.state.scrollOffset < 95 ? "helper" : "helper active";
+    const {cartItems} = this.props;
     return (
       <>
         <nav className={navStickyClass}>
@@ -44,7 +48,7 @@ class Navigation extends React.Component{
             </div>
             <div className="nav__additional">
               <div className="nav__additional-cart">
-                <CartItem />
+                <CartItem cartItems={cartItems}/>
               </div>
               <div className="nav__additional-search">
                 <span className="icon-search"></span>
@@ -54,32 +58,15 @@ class Navigation extends React.Component{
           </div>
         </nav>
 
+
         <section className={helperClass}></section>
 
-        <section className="menu-section">
-          <div className="container">
-            <ul>
-              <li className="menu__item">
-                <NavLink to="/" activeClassName="active">Home</NavLink>
-              </li>
-              <li className="menu__item">
-                <NavLink to="/bedroom" activeClassName="active">Bedroom</NavLink>
-              </li>
-              <li className="menu__item">
-                <NavLink to="/livingroom" activeClassName="active">Living room</NavLink>
-              </li>
-              <li className="menu__item">
-                <NavLink to="/shop" activeClassName="active">Shop</NavLink>
-              </li>
-              <li className="menu__item">
-                <NavLink to="/blog" activeClassName="active">Blog</NavLink>
-              </li>
-            </ul>
-          </div>
-        </section>
+
+        <Menu />
       </>
     )
   }
 }
 
-export default Navigation
+const mapStateToProps = (state) => ({ cartItems: state.cart.cartItems })
+export default connect(mapStateToProps, null)(Navigation)
