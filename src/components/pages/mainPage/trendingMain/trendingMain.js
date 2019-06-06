@@ -15,6 +15,9 @@ class TrendingMain extends Component {
 
   render() {
     const { trendingData, addToCart } = this.props;
+    const TrendingItems = trendingData.map(item => (
+      <TrendingItem key={item.id} data={item} addToCart={addToCart} />
+    ));
     return (
       <section className="trending-section">
         <div className="container">
@@ -22,11 +25,7 @@ class TrendingMain extends Component {
           <h2 className="main-descr">We Believe It’s Well Worth Paying That Extra For Quality And Service.</h2>
           <div className="main-line" />
           <div className="trending__row">
-            {
-              trendingData.map(item => (
-                <TrendingItem key={item.id} data={item} addToCart={addToCart} />
-              ))
-            }
+            { TrendingItems }
           </div>
         </div>
       </section>
