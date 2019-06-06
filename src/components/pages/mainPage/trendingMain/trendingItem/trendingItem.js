@@ -1,28 +1,30 @@
-import React from "react"
-import Rating from "react-rating"
+import React from 'react';
+import Rating from 'react-rating';
 
-import "./trendingItem.sass"
+import './trendingItem.sass';
 
-import AddToCartButton from "../addToCartButton/addToCartButton"
+import AddToCartButton from '../addToCartButton/addToCartButton';
 
 const TrendingItem = (props) => {
-  const {data} = props;
-  const {title, price, image, rate} = data;
-  const imgPath = "/images/main/products/" + image;
+  const { data } = props;
+  const {
+    title, price, image, rate,
+  } = data;
+  const imgPath = `/images/main/products/${image}`;
 
   return (
     <div className="trending__item">
-      <img src={imgPath} alt={title}/>
+      <img src={imgPath} alt={title} />
       <h2>{title}</h2>
-      <h3>${price}</h3>
+      <h3>{`$${price}`}</h3>
       <Rating
         initialRating={rate}
         fullSymbol={<div className="rate rate-full">★</div>}
         emptySymbol={<div className="rate rate-empty">★</div>}
       />
-      <AddToCartButton data={data}/>
+      <AddToCartButton data={data} />
     </div>
-  )
-}
+  );
+};
 
-export default TrendingItem
+export default TrendingItem;

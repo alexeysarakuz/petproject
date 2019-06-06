@@ -1,11 +1,7 @@
-export const getTrendingItems = () => {
-  return{
-    type: "GET_TRENDING"
-  } 
-}
+export const getTrendingItems = () => ({
+  type: 'GET_TRENDING',
+});
 
-export const addToCart = (item) => {
-  return{
-    type: "ADD_TOCART", item: item
-  }
-}
+export const addToCart = item => ({
+  type: 'ADD_TOCART', item,
+});

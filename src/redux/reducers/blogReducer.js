@@ -20,21 +20,21 @@ const blogPosts = [
     content: 'We have some simple decorating ideas to make your coffee table stylish and functional. It all starts and',
     date: 'September 17, 2018',
     image: 'post2.png',
-  }
-]
+  },
+];
+
+const defaultBlog = {
+  blogPosts: [],
+};
+
 
 const BlogReducer = (state = defaultBlog, action) => {
   switch (action.type) {
-    case "GET_BLOGPOSTS":
-      return {...state, blogPosts: blogPosts}
+    case 'GET_BLOGPOSTS':
+      return { ...state, blogPosts };
     default:
-      return state
+      return state;
   }
-}
+};
 
-const defaultBlog = {
-  blogPosts: []
-}
-
-
-export default BlogReducer
+export default BlogReducer;

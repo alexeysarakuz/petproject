@@ -1,5 +1,8 @@
-export const getBlogPosts = () => {
-  return{
-    type: "GET_BLOGPOSTS"
-  }
-}
+export const getBlogPosts = () => ({
+  type: 'GET_BLOGPOSTS',
+});
+
+
+export const getCurretPost = () => ({
+  type: 'GET_CURRENTPOST',
+});

@@ -1,8 +1,8 @@
-import {combineReducers} from "redux"
+import { combineReducers } from 'redux';
 
-import TrendingReducer from "./reducers/trendingReducer.js"
-import CartReducer from "./reducers/cartReducer.js"
-import BlogReducer from "./reducers/blogReducer.js"
+import TrendingReducer from './reducers/trendingReducer';
+import CartReducer from './reducers/cartReducer';
+import BlogReducer from './reducers/blogReducer';
 
-const mainReducer = combineReducers({trending: TrendingReducer, cart: CartReducer, blog: BlogReducer});
-export default mainReducer
+const mainReducer = combineReducers({ TrendingReducer, CartReducer, BlogReducer });
+export default mainReducer;

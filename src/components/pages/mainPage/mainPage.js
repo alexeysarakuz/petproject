@@ -1,22 +1,19 @@
-import React from "react"
+import React from 'react';
 
-import HeaderMain from "./headerMain/headerMain.js"
-import TrendingMain from "./trendingMain/trendingMain.js"
-import PostersMain from "./postersMain/postersMain.js"
-import ProductsMain from "./productsMain/productsMain.js"
-import BlogMain from "./blogMain/blogMain.js"
-import PartnersMain from "./partnersMain/partnersMain.js"
+import HeaderMain from './headerMain/headerMain';
+import TrendingMain from './trendingMain/trendingMain';
+import PostersMain from './postersMain/postersMain';
+import ProductsMain from './productsMain/productsMain';
+import BlogMain from './blogMain/blogMain';
 
-const MainPage = () => {
-  return (
-    <>
-      <HeaderMain />
-      <TrendingMain />
-      <PostersMain />
-      <ProductsMain />
-      <BlogMain />
-    </>
-  )
-}
+const MainPage = () => (
+  <>
+    <HeaderMain />
+    <TrendingMain />
+    <PostersMain />
+    <ProductsMain />
+    <BlogMain />
+  </>
+);
 
-export default MainPage
+export default MainPage;
