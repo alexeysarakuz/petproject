@@ -1,8 +1,5 @@
 import React from 'react';
 
-import { connect } from 'react-redux';
-import * as actions from '../../../../../redux/actions/trending/trendingActions';
-
 import './addToCartButton.sass';
 
 class AddToCartButton extends React.Component {
@@ -33,4 +30,4 @@ class AddToCartButton extends React.Component {
   }
 }
 
-export default connect(null, actions)(AddToCartButton);
+export default AddToCartButton;

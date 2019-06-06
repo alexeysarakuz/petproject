@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 const CartItem = ({ cartItems }) => {
@@ -15,4 +15,4 @@ CartItem.propTypes = {
   cartItems: PropTypes.instanceOf(Array).isRequired,
 };
 
-export default CartItem;
+export default memo(CartItem);

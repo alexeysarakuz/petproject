@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './menu.sass';
@@ -27,4 +27,4 @@ const Menu = () => (
   </section>
 );
 
-export default Menu;
+export default memo(Menu);
