@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import './menu.sass';
+
 const Menu = () => (
   <section className="menu-section">
     <div className="container">

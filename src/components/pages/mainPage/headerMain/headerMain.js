@@ -23,6 +23,7 @@ const HeaderMain = () => (
             <h3>Big Saving Season</h3>
             <h2>
               <b>Bedroom</b>
+              <br />
               Furniture
             </h2>
           </Link>
@@ -30,6 +31,7 @@ const HeaderMain = () => (
             <h3>Big Saving Season</h3>
             <h2>
               <b>KITCHEN</b>
+              <br />
               FURNITURE
             </h2>
           </Link>
@@ -37,6 +39,7 @@ const HeaderMain = () => (
             <h3>Discover Now</h3>
             <h2>
               <b>CREATIVE</b>
+              <br />
               FURNITURE
             </h2>
           </Link>
