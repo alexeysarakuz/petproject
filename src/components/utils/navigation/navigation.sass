@@ -1,3 +1,7 @@
+@mixin max-width($w)
+  @media (max-width: $w)
+    @content
+
 .helper
   height: 82.25px
 .nav
@@ -28,6 +32,14 @@
       font-weight: bold
       span
         transition: .5s
+        &.nav__call-number
+          +max-width(990px)
+            display: none
+        &.nav__call-text
+          +max-width(445px)
+            display: none
+
+
       &:hover
         color: #02ae70
     span

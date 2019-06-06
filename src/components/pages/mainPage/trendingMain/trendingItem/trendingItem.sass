@@ -1,13 +1,25 @@
+@mixin max-width($w)
+  @media (max-width: $w)
+    @content
+
 .trending
   &__row
     display: flex
     justify-content: space-between
     flex-wrap: wrap
     margin-top: 40px
+    +max-width(992px)
+      justify-content: space-around
   &__item
     width: 23%
     margin-bottom: 25px
     padding-bottom: 10px
+    +max-width(992px)
+      width: 30%
+    +max-width(710px)
+      width: 40%
+    +max-width(431px)
+      width: 70%
     &:hover
       h2
         transform: translateY(-50px)

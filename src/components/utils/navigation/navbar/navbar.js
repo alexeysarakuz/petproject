@@ -11,7 +11,10 @@ const NavBar = ({ navStickyClass, cartItems, helperClass }) => (
         <div className="nav__call">
           <a href="tel:+380990000000">
             <span className="icon-phone" />
-            <span>CALL US NOW: +380 99 000 0000</span>
+            <span>
+              <span className="nav__call-text">CALL US NOW</span>
+              <span className="nav__call-number">: +380 99 000 0000</span>
+            </span>
           </a>
         </div>
         <div className="nav__logo">
