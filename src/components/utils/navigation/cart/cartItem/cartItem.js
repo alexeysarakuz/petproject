@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CartItem = ({ cartItems }) => {
   const itemsInCart = cartItems.length;
@@ -8,6 +9,10 @@ const CartItem = ({ cartItems }) => {
       <span className="basket-num">{itemsInCart}</span>
     </div>
   );
+};
+
+CartItem.propTypes = {
+  cartItems: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default CartItem;
