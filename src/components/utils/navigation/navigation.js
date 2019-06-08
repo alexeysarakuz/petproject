@@ -24,10 +24,8 @@ class Navigation extends Component {
   }
 
   render() {
-    const { cartItems } = this.props;
+    const { cartItems, totalPrice, totalQuantity } = this.props;
     const { scrollOffset } = this.state;
-    console.log(cartItems);
-
     const navStickyClass = scrollOffset < 95 ? 'nav' : 'nav active';
     const helperClass = scrollOffset < 95 ? 'helper' : 'helper active';
     return (
@@ -35,6 +33,8 @@ class Navigation extends Component {
         navStickyClass={navStickyClass}
         helperClass={helperClass}
         cartItems={cartItems}
+        totalPrice={totalPrice}
+        totalQuantity={totalQuantity}
       />
     );
   }
@@ -42,8 +42,8 @@ class Navigation extends Component {
 
 const mapStateToProps = state => ({
   cartItems: state.CartReducer.cartItems,
-  // totalQuantity: state.CartReducer.totalQuantity,
-  // totalPrice: state.CartReducer.cartItems,
+  totalPrice: state.CartReducer.totalPrice,
+  totalQuantity: state.CartReducer.totalQuantity,
 });
 
 export default connect(mapStateToProps, null)(Navigation);

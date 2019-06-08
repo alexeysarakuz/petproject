@@ -1,21 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-const CartIcon = ({ cartItems }) => {
-  let itemsInCart = 0;
-  for (let i = 0; i < cartItems.length; i += 1) {
-    itemsInCart += cartItems[i].quantity;
-  }
-  return (
-    <div>
-      <span className="icon-basket" />
-      <span className="basket-num">{itemsInCart}</span>
-    </div>
-  );
-};
+const CartIcon = ({ totalQuantity }) => (
+  <div>
+    <span className="icon-basket" />
+    <span className="basket-num">{totalQuantity}</span>
+  </div>
+);
 
 CartIcon.propTypes = {
-  cartItems: PropTypes.instanceOf(Array).isRequired,
+  totalQuantity: PropTypes.number.isRequired,
 };
 
-export default CartIcon;
+export default memo(CartIcon);
