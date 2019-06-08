@@ -6,7 +6,8 @@ import NavLogo from '../navlogo/navlogo';
 import CartPopUp from '../cartPopUp/cartPopUp';
 
 const NavBar = ({
-  navStickyClass, helperClass, totalPrice, totalQuantity, cartItems,
+  navStickyClass, helperClass, totalPrice,
+  totalQuantity, cartItems, cartPopUpStatus, toggleCartPopup,
 }) => (
   <React.Fragment>
     <nav className={navStickyClass}>
@@ -25,7 +26,7 @@ const NavBar = ({
         </div>
         <div className="nav__additional">
           <div className="nav__additional-cart">
-            <CartIcon totalQuantity={totalQuantity} />
+            <CartIcon totalQuantity={totalQuantity} toggleCartPopup={toggleCartPopup} />
           </div>
           <div className="nav__additional-search">
             <span className="icon-search" />
@@ -35,7 +36,7 @@ const NavBar = ({
       </div>
     </nav>
 
-    <CartPopUp cartPopUpStatus cartItems={cartItems} totalPrice={totalPrice} />
+    <CartPopUp cartPopUpStatus={cartPopUpStatus} cartItems={cartItems} totalPrice={totalPrice} />
 
     <section className={helperClass} />
 

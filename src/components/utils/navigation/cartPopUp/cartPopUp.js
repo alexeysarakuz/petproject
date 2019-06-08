@@ -4,6 +4,8 @@ import './cartPopUp.sass';
 
 import CartPopUpItem from './cartPopUpItem/cartPopUpItem';
 
+import CartContent from './cartContent/cartContent';
+
 const CartPopUp = ({ cartPopUpStatus, cartItems, totalPrice }) => {
   const cartPopUpClass = cartPopUpStatus ? 'visible' : '';
 
@@ -19,14 +21,10 @@ const CartPopUp = ({ cartPopUpStatus, cartItems, totalPrice }) => {
   const showPopupContent = cartItems.length === 0 ? (
     <p>No products in the cart</p>
   ) : (
-    <>
-      <ul className="cart-popup__list">
-        {cartPopUpItems}
-      </ul>
-      <h3 className="cart-popup__total">
-        {`Total: $${totalPrice.toFixed(2)}`}
-      </h3>
-    </>
+    <CartContent
+      cartPopUpItems={cartPopUpItems}
+      totalPrice={totalPrice}
+    />
   );
 
   return (

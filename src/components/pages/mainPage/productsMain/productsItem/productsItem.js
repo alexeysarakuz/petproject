@@ -6,14 +6,14 @@ import './productsItem.sass';
 import { Link } from 'react-router-dom';
 
 const ProductsItem = ({
-  title, price, rate, image,
+  title, price, rate, image, id,
 }) => (
   <div className="products__item">
     <div className="products__image">
       <img src={`/images/main/products/${image}`} alt={title} />
     </div>
     <div className="products__content">
-      <Link to="/">
+      <Link to={`/item/${id}`}>
         <h2>{title}</h2>
       </Link>
       <h3>{`$${price}.00`}</h3>

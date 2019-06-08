@@ -11,6 +11,7 @@ class Navigation extends Component {
     super();
     this.state = {
       scrollOffset: 0,
+      cartPopUpStatus: false,
     };
   }
 
@@ -23,9 +24,13 @@ class Navigation extends Component {
     };
   }
 
+  toggleCartPopup = () => {
+    this.setState(prevState => ({ cartPopUpStatus: !prevState.cartPopUpStatus }));
+  }
+
   render() {
     const { cartItems, totalPrice, totalQuantity } = this.props;
-    const { scrollOffset } = this.state;
+    const { scrollOffset, cartPopUpStatus } = this.state;
     const navStickyClass = scrollOffset < 95 ? 'nav' : 'nav active';
     const helperClass = scrollOffset < 95 ? 'helper' : 'helper active';
     return (
@@ -35,6 +40,8 @@ class Navigation extends Component {
         cartItems={cartItems}
         totalPrice={totalPrice}
         totalQuantity={totalQuantity}
+        cartPopUpStatus={cartPopUpStatus}
+        toggleCartPopup={this.toggleCartPopup}
       />
     );
   }

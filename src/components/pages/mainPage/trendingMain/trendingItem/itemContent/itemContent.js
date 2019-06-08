@@ -1,14 +1,18 @@
 import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
+
 import Rating from 'react-rating';
 
 const ItemContent = ({ data }) => {
   const {
-    title, price, rate, image,
+    title, price, rate, image, id,
   } = data;
   const imgPath = `/images/main/products/${image}`;
   return (
     <>
-      <img src={imgPath} alt={title} />
+      <Link to={`/item/${id}`}>
+        <img src={imgPath} alt={title} />
+      </Link>
       <h2>{title}</h2>
       <h3>{`$${price}`}</h3>
       <Rating
