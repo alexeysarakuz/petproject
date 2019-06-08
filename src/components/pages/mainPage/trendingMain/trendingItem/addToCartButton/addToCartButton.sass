@@ -1,3 +1,7 @@
+@mixin max-width($w)
+  @media (max-width: $w)
+    @content
+
 .trending
   &__item
     position: relative
@@ -14,6 +18,16 @@
       cursor: pointer
       position: absolute
       left: 0
+      +max-width(710px)
+        position: static
+        opacity: 1
+        transform: translateY(0)
+        display: block
+        width: 100%
+        margin-top: 20px
+      +max-width(600px)
+        padding: 10px 20px
+
       &:focus
         outline: none
       &:hover

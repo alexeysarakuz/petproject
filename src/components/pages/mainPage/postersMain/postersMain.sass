@@ -1,7 +1,13 @@
+@mixin max-width($w)
+  @media (max-width: $w)
+    @content
+
 .posters-section
   margin-top: 40px
   display: flex
   align-items: stretch
+  +max-width(732px)
+    display: block
 .posters__col
   width: 25%
   background-size: cover
@@ -10,6 +16,20 @@
   padding-bottom: 8%
   overflow: hidden
   position: relative
+  +max-width(1433px)
+    width: 33%
+    padding-top: 12%
+    padding-bottom: 12%
+  +max-width(1179px)
+    padding: 10% 0
+  +max-width(786px)
+    padding: 8% 0px
+  +max-width(732px)
+    width: 100%
+    padding-left: 30px
+    background-position: center
+  +max-width(400px)
+    padding-left: 0
   &::before
     content: ""
     position: absolute
@@ -22,6 +42,17 @@
     z-index: 3
     transition: .4s
     transform: scale(0)
+  &::after
+    +max-width(732px)
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    opacity: .2
+    background-color: #000
+    width: 100%
+    height: 100%
+    z-index: 3
   &:hover
     &::before
       transform: scale(1)
@@ -37,6 +68,18 @@
     margin-bottom: 20px
     position: relative
     z-index: 4
+    +max-width(1030px)
+      font-size: 25px
+      margin-right: 10px
+      margin-left: 10px
+      line-height: 1.5
+    +max-width(732px)
+      text-align: left
+      margin-left: 0
+      margin-bottom: 10px
+    +max-width(400px)
+      text-align: center
+      margin-right: 0
   p
     font-size: 17px
     line-height: 1.6
@@ -45,6 +88,15 @@
     margin-left: 5%
     position: relative
     z-index: 4
+    +max-width(1030px)
+      font-size: 14px
+    +max-width(732px)
+      text-align: left
+      margin-left: 0
+    +max-width(400px)
+      text-align: center
+      padding-left: 4px
+      padding-right: 4px
   &1
     background-image: url("/images/main/posters/banner1.jpg")
     position: relative
@@ -64,3 +116,5 @@
     background-image: url("/images/main/posters/banner3.png")
   &4
     background-image: url("/images/main/posters/banner4.png")
+    +max-width(1433px)
+      display: none

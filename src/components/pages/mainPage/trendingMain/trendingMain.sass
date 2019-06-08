@@ -1,2 +1,8 @@
+@mixin max-width($w)
+  @media (max-width: $w)
+    @content
+
 .trending-section
   margin-top: 230px
+  +max-width(429px)
+    margin-top: 80px

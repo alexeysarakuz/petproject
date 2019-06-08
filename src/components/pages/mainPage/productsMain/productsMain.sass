@@ -1,3 +1,7 @@
+@mixin max-width($w)
+  @media (max-width: $w)
+    @content
+
 .products
   &-section
     padding-top: 50px
@@ -6,8 +10,12 @@
     display: flex
     justify-content: space-between
     align-items: stretch
+    +max-width(1085px)
+      display: block
   &__col
     width: 30%
+    +max-width(1085px)
+      width: 100%
     h2.products__col-title
       font-weight: bold
       text-transform: uppercase
@@ -15,6 +23,9 @@
       margin-bottom: 40px
       text-align: center
       position: relative
+      +max-width(1085px)
+        margin-bottom: 20px
+        margin-top: 50px
       &::after
         content: ''
         position: absolute
@@ -33,6 +44,14 @@
     padding-left: 20px
     padding-right: 20px
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .05)
+    +max-width(1085px)
+      width: 100%
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    +max-width(344px)
+      padding-left: 8px
+      padding-right: 8px
 
 .rate
   font-size: 15px

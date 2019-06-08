@@ -1,8 +1,9 @@
 import React from 'react';
 
-import CartItem from '../cart/cartItem/cartItem';
+import CartIcon from '../cartIcon/cartIcon';
 import Menu from '../menu/menu';
 import NavLogo from '../navlogo/navlogo';
+import CartPopUp from '../cartPopUp/cartPopUp';
 
 const NavBar = ({ navStickyClass, cartItems, helperClass }) => (
   <React.Fragment>
@@ -22,7 +23,7 @@ const NavBar = ({ navStickyClass, cartItems, helperClass }) => (
         </div>
         <div className="nav__additional">
           <div className="nav__additional-cart">
-            <CartItem cartItems={cartItems} />
+            <CartIcon cartItems={cartItems} />
           </div>
           <div className="nav__additional-search">
             <span className="icon-search" />
@@ -31,6 +32,8 @@ const NavBar = ({ navStickyClass, cartItems, helperClass }) => (
         <div className="clearfix" />
       </div>
     </nav>
+
+    <CartPopUp cartPopUpStatus cartItems={cartItems} />
 
     <section className={helperClass} />
 

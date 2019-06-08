@@ -1,8 +1,14 @@
+@mixin max-width($w)
+  @media (max-width: $w)
+    @content
+
 .menu-section
   position: absolute
   width: 100%
   text-align: center
   background-color: rgba(0, 0, 0, .5)
+  +max-width(429px)
+    display: none
 
 .menu
   &__item
@@ -10,6 +16,10 @@
     margin-left: 20px
     margin-right: 20px
     padding: 10px 0
+    +max-width(515px)
+      margin-left: 12px
+      margin-right: 12px
+
     a
       text-decoration: none
       color: #000

@@ -7,7 +7,7 @@ import ItemContent from './itemContent/itemContent';
 const TrendingItem = ({ data, addToCart }) => (
   <div className="trending__item">
     <ItemContent data={data} />
-    <AddToCartButton addToCart={addToCart} />
+    <AddToCartButton data={data} addToCart={addToCart} />
   </div>
 );
 

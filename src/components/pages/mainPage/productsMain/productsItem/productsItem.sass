@@ -1,7 +1,19 @@
+@mixin max-width($w)
+  @media (max-width: $w)
+    @content
+
 .products
   &__item
     margin-bottom: 30px
     margin-top: 30px
+    +max-width(1085px)
+      width: 30.33%
+    +max-width(860px)
+      width: 45%
+    +max-width(638px)
+      width: 90%
+    +max-width(368px)
+      width: 100%
     img
       max-width: 100%
     h2
@@ -31,6 +43,8 @@
     width: 40%
     float: left
     padding-right: 20px
+    +max-width(368px)
+      padding-right: 10px
   &__content
     width: 60%
     float: right
