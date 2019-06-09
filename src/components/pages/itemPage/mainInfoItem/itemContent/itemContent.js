@@ -1,9 +1,11 @@
 import React from 'react';
+import Rating from 'react-rating';
 
 import './itemContent.sass';
 
+
 const ItemContent = ({
-  title, price, categories, tags,
+  title, price, categories, tags, rate, descr,
 }) => {
   const categoriesString = categories.join(', ');
   const tagsString = tags.join(', ');
@@ -19,6 +21,12 @@ const ItemContent = ({
         <b>Tags: </b>
         {tagsString}
       </div>
+      <Rating
+        initialRating={rate}
+        fullSymbol={<div className="rate rate-full">★</div>}
+        emptySymbol={<div className="rate rate-empty">★</div>}
+      />
+      <p>{descr}</p>
     </div>
   );
 };
