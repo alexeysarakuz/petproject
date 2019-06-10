@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import './itemImage.sass';
 
@@ -8,4 +8,4 @@ const ItemImage = ({ image, title }) => (
   </div>
 );
 
-export default ItemImage;
+export default memo(ItemImage);

@@ -5,10 +5,14 @@ import './itemContent.sass';
 
 
 const ItemContent = ({
-  title, price, categories, tags, rate, descr,
+  title, price, id, image, categories, tags,
+  rate, descr, addToCartNum, changeCartNum, addToCartItemPage,
 }) => {
   const categoriesString = categories.join(', ');
   const tagsString = tags.join(', ');
+  const itemForCart = {
+    title, price, rate, id, image,
+  };
   return (
     <div className="itemMain__content">
       <h2>{title}</h2>
@@ -27,6 +31,16 @@ const ItemContent = ({
         emptySymbol={<div className="rate rate-empty">★</div>}
       />
       <p>{descr}</p>
+      <h4>Quantity</h4>
+      <input type="text" value={addToCartNum} onChange={changeCartNum} />
+      <button
+        onClick={() => {
+          addToCartItemPage(itemForCart);
+        }}
+      >
+        <span className="icon-shopping-cart" />
+        Add to cart
+      </button>
     </div>
   );
 };

@@ -3,6 +3,10 @@ export const getItemInfo = identifier => ({
   id: identifier,
 });
 
+export const addToCart = (item, quantity) => ({
+  type: 'ADD_TOCART-MULTIPLE', item, quantity,
+});
+
 export const sendItemReview = () => ({
   type: 'SEND_REVIEW',
 });
